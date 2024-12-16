@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <h1>Welcome to Universal Tech Academy.</h1>
+
+            {% if session['username'] %}
+                <h3>Let's get started.</h3>
+            {% else %}
+                <p>Already registered? <a href="{{url_for('login') }}">Login</a></p>
+            {% endif %}
+
+            <div style="text-align:left;">
+                <h2>What Is HTML All About?</h2> 
+                
+                <p>Flask is a versatile and popular Python web framework renowned for its simplicity and flexibility. It empowers developers to create a wide array of web applications, from small-scale projects to robust, enterprise-level systems. Flask's lightweight and modular design encourages a rapid development approach, making it an ideal choice for both beginners and experienced developers. It offers a streamlined development experience with minimal boilerplate code, allowing you to focus on building your application's core functionality.  </p>
+
+                <p>Flask's minimalistic nature provides the freedom to choose and integrate the tools and libraries that best suit your project's specific needs. This flexibility enables you to tailor your application's architecture and functionality to your exact requirements. Whether you're building a simple website, a complex web application, or a RESTful API, Flask's adaptability and extensive ecosystem of extensions make it a powerful tool for realizing your web development goals. </p> 
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
